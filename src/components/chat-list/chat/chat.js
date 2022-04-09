@@ -3,7 +3,8 @@ import { AccountCircle } from '@mui/icons-material';
 import { makeStyles } from "@mui/styles";
 import st from "./chat.module.css"
 
-const useStyles = makeStyles(() => {
+const useStyles = makeStyles((ctx) => {
+    // console.log("ctx" , ctx) // получаем из библиотеки ThemeProvider, видим объект со многими свойствами имеет breacpoint -это разрешения экрана, которые можно переопеределить, при адаптивной верстке; миксины -стили написанные заранее,palette -палитра. настроенная в классических цветах
     return {
         item: { // пример переопределения встроенного стиля у библиотеки
             "&.Mui-selected": {
